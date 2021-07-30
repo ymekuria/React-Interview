@@ -5,18 +5,18 @@ import Link from 'next/link';
 export default function Question3() {
 	return <Container sx={{ pt: 2 }}>
 		<Grid>
-			<Link href='/question2' passHref>
+			<Link href='/question3' passHref>
 				<ListItemButton component='a'>
-					<ListItemText>Go to Question 2</ListItemText>
+					<ListItemText>Go Question 3</ListItemText>
 				</ListItemButton>
 			</Link>
-			<Link href='/question4' passHref>
+			<Link href='/' passHref>
 				<ListItemButton component='a'>
-					<ListItemText>Go to Question 4</ListItemText>
+					<ListItemText>Go to Home</ListItemText>
 				</ListItemButton>
 			</Link>
 		</Grid>
-		<Typography variant='h5'>Question 3</Typography>
-		<Typography>Convert the providers in src/pages/_app.tsx to use the providerComposer provided in src/providerComposer.tsx</Typography>
+		<Typography variant='h5'>Question 4</Typography>
+		<Typography>In src/pages/dataBase create a trigger/function which will calculate the age on insert or modify given the birthday</Typography>
 	</Container>;
 }

@@ -14,4 +14,4 @@ CREATE TABLE something
     age INTEGER
 );
 
--- create a trigger/function which will calculate the age on insert or modify given the birthdate
+-- create a trigger/function which will calculate the age on insert or modify given the birthday
