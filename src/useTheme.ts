@@ -24,7 +24,7 @@ const darkTheme = createTheme( merge( commonTheme, {
 } ) );
 
 export default function useTheme() {
-	const dark = useMediaQuery( '(prefers-color-scheme: dark)' );
+	const dark = useMediaQuery( '(prefers-color-scheme: light)' );
 	
 	return dark ? darkTheme : lightTheme;
 }
