@@ -3,7 +3,7 @@ import { CacheProvider } from '@emotion/react';
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@material-ui/core';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-
+import React from 'react';
 import useTheme from '../useTheme';
 
 const cache = createCache( {
@@ -11,9 +11,9 @@ const cache = createCache( {
 	prepend: true
 } );
 
-function MyApp( { Component, pageProps }: AppProps ) {
+export default function MyApp( { Component, pageProps }: AppProps ) {
 	const theme = useTheme();
-	
+
 	return <>
 		<Head>
 			<title>Invoiss Interview</title>
@@ -25,13 +25,12 @@ function MyApp( { Component, pageProps }: AppProps ) {
 			/>
 		</Head>
 		<StyledEngineProvider injectFirst>
-			<CacheProvider value={cache}>
-				<ThemeProvider theme={theme}>
-					<CssBaseline/>
-					<Component {...pageProps}/>
+			<CacheProvider value={ cache }>
+				<ThemeProvider theme={ theme }>
+					<CssBaseline />
+					<Component { ...pageProps } />
 				</ThemeProvider>
 			</CacheProvider>
 		</StyledEngineProvider>
 	</>;
 }
-export default MyApp;

@@ -9,6 +9,6 @@ export function provider<T extends keyof JSX.IntrinsicElements | React.JSXElemen
 
 export function ProviderComposer( { providers, children }: { providers: any[], children: React.ReactNode } ) {
 	return providers.reduceRight( ( content, [ Provider, props ] ) => {
-		return <Provider {...props}>{content}</Provider>;
+		return <Provider { ...props }>{ content }</Provider>;
 	}, children );
 }

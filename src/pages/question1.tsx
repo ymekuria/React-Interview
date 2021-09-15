@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function Question1() {
-	return <Container sx={{ pt: 2 }}>
+	return <Container sx={ { pt: 2 } }>
 		<Grid>
 			<Link href='/' passHref>
 				<ListItemButton component='a'>

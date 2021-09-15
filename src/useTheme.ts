@@ -25,12 +25,11 @@ const darkTheme = createTheme( merge( commonTheme, {
 
 export default function useTheme() {
 	const dark = useMediaQuery( '(prefers-color-scheme: light)' );
-	
+
 	return dark ? darkTheme : lightTheme;
 }
 
 declare module '@material-ui/styles' {
 	// noinspection JSUnusedGlobalSymbols
-	interface DefaultTheme extends Theme {
-	}
+	type DefaultTheme = Theme
 }
